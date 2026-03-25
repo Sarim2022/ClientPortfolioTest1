@@ -61,6 +61,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
     padding: clamp(0.75rem, 2vw, 1rem) var(--space-inline);
     border-bottom: 1px solid var(--border-strong);
     width: 100%;
@@ -70,6 +71,15 @@ header {
     background: color-mix(in srgb, var(--bg) 92%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+}
+
+.desktop-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 
 .logo {
@@ -721,12 +731,30 @@ h1 {
 
 /* --- Responsive: nav + mobile polish --- */
 @media (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        align-items: center;
+        column-gap: 0.625rem;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
     .desktop-nav {
         display: none;
     }
 
+    .contact-btn {
+        flex-shrink: 0;
+        justify-self: end;
+    }
+
     .menu-icon {
         display: flex;
+        flex-shrink: 0;
+        justify-self: end;
     }
 
     .hero {
