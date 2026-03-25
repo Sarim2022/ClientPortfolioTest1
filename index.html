@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditye Singh | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
     <div class="logo">Aditye Singh</div>
-    <div class="menu-icon" id="menuToggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+    <button type="button" class="menu-icon" id="menuToggle" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
     <nav class="desktop-nav">
         <a href="#">Work</a>
         <a href="#">Play</a>
@@ -24,7 +27,7 @@
 </header>
 
 <div class="mobile-overlay" id="mobileOverlay">
-    <div class="close-btn" id="closeMenu">&times;</div>
+    <button type="button" class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
     <div class="overlay-links">
         <a href="#">WORK</a>
         <a href="#">PLAY</a>
